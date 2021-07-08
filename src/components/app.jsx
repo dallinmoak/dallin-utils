@@ -1,15 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-export default class App extends Component {
-  constructor(){
-    super();
-  }
-  
-  render() {
-    return(
-      <div className='main-content'>
-        <h1>Hello World!</h1>
-      </div>
-    );
-  }
+import Menu from './menu.jsx';
+import Home from './home.jsx';
+import UrlBuilder from './url-builder.jsx'
+
+export default function App() {
+  return(
+    <Router className='main-content'>
+      <Menu/>
+      <hr/>
+      <Switch>
+        <Route exact path='/'>
+          <Home/>
+        </Route>
+        <Route path='/url-builder'>
+          <UrlBuilder/>
+        </Route>
+      </Switch>
+    </Router>
+  );
 }

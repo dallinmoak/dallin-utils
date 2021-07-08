@@ -7,3 +7,14 @@ body{
 .main-content h1 {
   text-decoration: underline;
 }
+
+.menu-main{
+  > *{
+    color: black;
+    text-decoration: none;
+    margin-right: 1em;
+  }
+  .menu-link-active {
+    text-decoration: underline;
+  }
+}
