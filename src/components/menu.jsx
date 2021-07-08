@@ -10,8 +10,6 @@ export default function Menu(){
   ]
   function printLinks() {
     return links.map((link, index) => {
-      console.log('link ',link);
-      console.log('index ',index);
       return(
         <Link
         key={index}

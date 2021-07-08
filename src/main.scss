@@ -1,7 +1,13 @@
 $background: #bdcef1;
 
+
+
 body{
   background-color: $background;
+  font-size: 1.7em;
+  @media screen and(max-width: 425px) {
+    font-size: 2.5em;
+  }
 }
 
 .main-content h1 {

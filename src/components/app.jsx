@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +10,11 @@ import Home from './home.jsx';
 import UrlBuilder from './url-builder.jsx'
 
 export default function App() {
+
+  useEffect(() => {
+    document.title = "Home Page";
+  }, []);
+
   return(
     <Router className='main-content'>
       <Menu/>
